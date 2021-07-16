@@ -31,12 +31,12 @@ RUN apt-get install -y openjdk-7-jdk
 RUN apt-get install -y --force-yes openjdk-8-jdk
 
 # java env setting, default jdk1.6
-ENV JAVA_HOME /usr/lib/jvm/jdk1.6.0_45
-ENV PATH $JAVA_HOME/bin:$PATH
-RUN echo "" >> /home/builder/.bashrc
-RUN echo "# jdk setting" >> /home/builder/.bashrc
-RUN echo "export JAVA_HOME=$JAVA_HOME" >> /home/builder/.bashrc
-RUN echo 'export PATH="$JAVA_HOME/bin:$PATH"' >> /home/builder/.bashrc
+#ENV JAVA_HOME /usr/lib/jvm/jdk1.6.0_45
+#ENV PATH $JAVA_HOME/bin:$PATH
+#RUN echo "" >> /home/builder/.bashrc
+#RUN echo "# jdk setting" >> /home/builder/.bashrc
+#RUN echo "export JAVA_HOME=$JAVA_HOME" >> /home/builder/.bashrc
+#RUN echo 'export PATH="$JAVA_HOME/bin:$PATH"' >> /home/builder/.bashrc
 
 # compile toolchain
 RUN apt-get install -y gcc-multilib g++-multilib build-essential
