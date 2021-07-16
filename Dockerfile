@@ -28,7 +28,7 @@ RUN apt-get install -y software-properties-common
 RUN add-apt-repository -y ppa:openjdk-r/ppa
 RUN apt-get update
 RUN apt-get install -y openjdk-7-jdk
-RUN apt-get install -y openjdk-8-jdk
+RUN apt-get install -y --force-yes openjdk-8-jdk
 
 # java env setting, default jdk1.6
 ENV JAVA_HOME /usr/lib/jvm/jdk1.6.0_45
