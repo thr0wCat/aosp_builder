@@ -27,9 +27,11 @@ RUN apt-get install -y software-properties-common
 #RUN add-apt-repository -y ppa:openjdk-r/ppa
 RUN add-apt-repository -y ppa:openjdk-r/ppa
 RUN apt-get update
-RUN apt-get install -y openjdk-7-jdk
+#编译android8.0.0不需要jdk1.7，所以注释掉
+#RUN apt-get install -y openjdk-7-jdk
 RUN apt-get install -y --force-yes openjdk-8-jdk
 
+#编译android8.0.0不需要jdk1.6，所以注释掉
 # java env setting, default jdk1.6
 #ENV JAVA_HOME /usr/lib/jvm/jdk1.6.0_45
 #ENV PATH $JAVA_HOME/bin:$PATH
